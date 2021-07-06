@@ -242,7 +242,7 @@
 
 @media only screen and (max-width: 768px) {
   .Contact {
-    height: 150vh;
+    height: 170vh;
   }
   .Contact .contact-card {
     width: 400px;
@@ -287,16 +287,16 @@
     resize: none;
   }
   .Contact form input::-webkit-input-placeholder, .Contact form textarea::-webkit-input-placeholder {
-    color: #001136;
+    color: white;
   }
   .Contact form input:-ms-input-placeholder, .Contact form textarea:-ms-input-placeholder {
-    color: #001136;
+    color: white;
   }
   .Contact form input::-ms-input-placeholder, .Contact form textarea::-ms-input-placeholder {
-    color: #001136;
+    color: white;
   }
   .Contact form input::placeholder, .Contact form textarea::placeholder {
-    color: #001136;
+    color: white;
   }
   .Contact form #input-submit {
     width: 400px;
