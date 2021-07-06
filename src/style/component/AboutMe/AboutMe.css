@@ -84,8 +84,6 @@
 }
 
 .aboutme .filter .text1 .t1-card {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.473);
   padding: 40px;
   border-radius: 10px;
@@ -103,8 +101,6 @@
 }
 
 .aboutme .filter .text2 .t2-card {
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.473);
   padding: 40px;
   border-radius: 10px;
