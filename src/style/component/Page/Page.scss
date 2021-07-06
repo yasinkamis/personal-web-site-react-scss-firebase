@@ -1,0 +1,111 @@
+//mixin
+
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+.home-page{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #001136;
+    color: white;
+    @include flex(center);
+    overflow: hidden;
+    background-image: url(../img/background.jpg);
+    .home-text{
+        position: relative;
+        width: 60%;
+        height: 90%;
+        flex-direction: column;
+        @include flex(space-around);
+        h3{
+            color:rgba(255, 255, 0, 0.644) ;
+        }
+        .header{
+            text-align: center;
+        }
+        .text{
+            position: relative;
+            width: 80%;
+            button{
+                width: 120px;
+                padding: 5px 10px;
+                margin-top: 10px;
+                background-color: rgba(0, 0, 0, 0.473);
+                border: 2px solid rgba(255, 255, 0, 0.644);
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    background-color: transparent;
+                }
+            }
+        }
+        img{
+            position: relative;
+            width: 40%;
+            border-radius: 50%;
+            z-index: 5;
+        }
+    }
+}
+
+
+
+$other-devices: 400px;
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+//styles for media sizes
+
+@media only screen and (max-width: $large) {
+    
+}
+@media only screen and (max-width: $medium) {
+    .home-page{
+        .home-text{
+            img{
+                width: 50%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $small) {
+    .home-page{
+        .home-text{
+            width: 80%;
+            .text{
+                width: 100%;
+            }
+            img{
+                width: 60%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: $extra-small) {
+    .home-page{
+        height: 95vh;
+    }
+}
+@media only screen and (max-width: $other-devices) {
+    .home-page{
+        .home-text{
+            .text{
+                width: 100%;
+                button{
+                    margin-top: 15px;
+                }
+            }
+            img{
+                width: 90%;
+            }
+        }
+    }
+}

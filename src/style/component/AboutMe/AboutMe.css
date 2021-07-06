@@ -1,0 +1,169 @@
+.aboutme {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  overflow: hidden;
+  background-image: url(../img/background.jpg);
+}
+
+.aboutme .filter {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutme .filter .text1 {
+  position: relative;
+  width: 80%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutme .filter .text1 h1 {
+  letter-spacing: 3px;
+}
+
+.aboutme .filter .text1 h1::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  left: 50%;
+  top: 92px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.aboutme .filter .text1 h1::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 94px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.aboutme .filter .text1 .t1-card {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.473);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.aboutme .filter .text1 .t1-card h3 {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 0, 0.644);
+}
+
+.aboutme .filter .text2 {
+  position: relative;
+  width: 80%;
+  height: 40%;
+}
+
+.aboutme .filter .text2 .t2-card {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.473);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.aboutme .filter .text2 .t2-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.aboutme .filter .text2 h3 {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 0, 0.644);
+}
+
+.aboutme .filter .text2 span {
+  color: rgba(255, 255, 0, 0.644);
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutme .filter .text1 {
+    margin-bottom: 10px;
+    width: 90%;
+  }
+  .aboutme .filter .text2 {
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutme .filter .text1 {
+    width: 90%;
+  }
+  .aboutme .filter .text2 {
+    width: 90%;
+  }
+  .aboutme .filter .text2 .t2-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutme .filter .text2 p {
+    text-align: center;
+  }
+  .aboutme .filter .text2 h3 {
+    font-size: 14px;
+  }
+  .aboutme .filter .text2 span {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=AboutMe.css.map */

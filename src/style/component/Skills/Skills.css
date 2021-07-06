@@ -1,0 +1,100 @@
+.Skills {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background-color: #001136;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  background-image: url(../img/background.jpg);
+}
+
+.Skills h1 {
+  margin-bottom: 20px;
+}
+
+.Skills h1::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  left: 50%;
+  top: 100px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.Skills h1::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 102px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.Skills p {
+  font-size: 18px;
+  margin: 40px 0 40px 0;
+}
+
+.Skills .lang {
+  position: relative;
+  width: 70%;
+}
+
+.Skills .lang .info-skills {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Skills .lang .range-skills {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  margin: 5px 0 15px 0;
+  border-radius: 15px;
+}
+
+.Skills .lang .range-skills .range {
+  position: relative;
+  height: 10px;
+  background-color: rgba(255, 255, 0, 0.644);
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Skills p {
+    text-align: center;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=Skills.css.map */

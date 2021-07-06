@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+//mixin
+
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+.loading{
+    background-color: #00031e;
+    @include flex(center);
+    position: relative;
+    width:100%;
+    height: 100vh; 
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include flex(center);
+    .info{
+        position: relative;
+        width: 20%;
+        height: 100%;
+        @include flex(center);
+        flex-direction: column;
+        background-color: #00031e;
+    }
+    .content{
+        position: relative;
+        width: 80%;
+        height: 100%;
+        @include flex(center);
+        flex-direction: row;
+    }
+}
+
+
+$other-devices: 400px;
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+$large: 1150px;
+
+//styles for media sizes
+
+@media only screen and (max-width: $large) {
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        @include flex(center);
+        .info{
+            position: relative;
+            width: 20%;
+            height: 100%;
+            @include flex(center);
+            flex-direction: column;
+            background-color: #00031e;
+        }
+        .content{
+            position: relative;
+            width: 80%;
+            height: 100%;
+            @include flex(center);
+            flex-direction: row;
+        }
+    }
+}
+
+@media only screen and (max-width: $medium) {
+    .container{
+        height: auto;
+        flex-direction: column;
+        .info{
+            width: 100%;
+            height: auto;;
+        }
+        .content{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+@media only screen and (max-width: $small) {
+    //your styles
+}
+@media only screen and (max-width: $extra-small) {
+    //your styles
+}
+@media only screen and (max-width: $other-devices) {
+    //your styles
+}

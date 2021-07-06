@@ -1,0 +1,317 @@
+.Project {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #001136;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  background-image: url(../img/background.jpg);
+}
+
+.Project h1 {
+  color: white;
+}
+
+.Project h1::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  left: 50%;
+  top: 80px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.Project h1::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 50%;
+  top: 82px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.Project .row {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Project .row .col1 {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.Project .row .col1 .linkedln, .Project .row .col1 .behance, .Project .row .col1 .instagram {
+  position: relative;
+  padding: 10px;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.473);
+  border-radius: 10px;
+}
+
+.Project .row .col1 .linkedln h2, .Project .row .col1 .behance h2, .Project .row .col1 .instagram h2 {
+  text-align: center;
+  margin: 5px 0 15px 0;
+  color: rgba(255, 255, 0, 0.644);
+}
+
+.Project .row .col1 .linkedln a, .Project .row .col1 .behance a, .Project .row .col1 .instagram a {
+  float: right;
+  width: 120px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  border: 2px solid rgba(255, 255, 0, 0.644);
+  border-radius: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.Project .row .col1 .linkedln a:hover, .Project .row .col1 .behance a:hover, .Project .row .col1 .instagram a:hover {
+  background-color: transparent;
+}
+
+.Project .row .col2 {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.Project .row .col2 .github {
+  position: relative;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.473);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Project .row .col2 .github img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.Project .row .col2 .github h3 {
+  padding: 0 10px;
+  color: rgba(255, 255, 0, 0.644);
+}
+
+.Project .row .col2 .github h3 span {
+  color: white;
+}
+
+.Project .row .col2 .github a {
+  float: right;
+  margin: 10px;
+  width: 120px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.473);
+  border: 2px solid rgba(255, 255, 0, 0.644);
+  border-radius: 5px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.Project .row .col2 .github a:hover {
+  background-color: transparent;
+}
+
+.Project .row .col2 .github h2 {
+  text-align: center;
+  margin: 5px 0 15px 0;
+  color: rgba(255, 255, 0, 0.644);
+}
+
+@media only screen and (max-width: 1200px) {
+  .Project .row .col1 {
+    width: 50%;
+  }
+  .Project .row .col1 .linkedln, .Project .row .col1 .behance, .Project .row .col1 .instagram {
+    width: 400px;
+  }
+  .Project .row .col1 .linkedln a, .Project .row .col1 .behance a, .Project .row .col1 .instagram a {
+    margin-top: 5px;
+  }
+  .Project .row .col2 {
+    width: 50%;
+  }
+  .Project .row .col2 .github {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .Project .row .col1 {
+    width: 50%;
+  }
+  .Project .row .col1 .linkedln, .Project .row .col1 .behance, .Project .row .col1 .instagram {
+    width: 350px;
+    margin: 10px;
+  }
+  .Project .row .col1 .linkedln a, .Project .row .col1 .behance a, .Project .row .col1 .instagram a {
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Project {
+    height: 170vh;
+  }
+  .Project .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Project .row .col1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Project .row .col1 .linkedln, .Project .row .col1 .behance, .Project .row .col1 .instagram {
+    width: 400px;
+  }
+  .Project .row .col2 {
+    margin-top: 20px;
+  }
+  .Project .row .col2 .github {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 461px) {
+  .Project .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Project .row .col1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Project .row .col1 .linkedln, .Project .row .col1 .behance, .Project .row .col1 .instagram {
+    width: 300px;
+  }
+  .Project .row .col2 {
+    margin-top: 20px;
+  }
+  .Project .row .col2 .github {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=Project.css.map */

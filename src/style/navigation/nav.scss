@@ -1,0 +1,126 @@
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+nav{
+    position: relative;
+    width: 100%;
+    height: 60%;
+    @include flex(center);
+    flex-direction: column;
+    .navlinks{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        @include flex(center);
+        flex-direction: column;
+        justify-content: space-around;
+        a{
+            position: relative;
+            text-decoration: none;
+            color: white;
+            width: 90%;
+            height: 50px;
+            background-color: #00031e;
+            @include flex(center);
+            font-size: 16px;
+            border-radius: 10px;
+            border: 2px solid #1768AC;
+            transition: all .5s ease-in-out;
+            &:hover{
+                background-color: #04009A;
+            }
+        }
+        a.active{
+            background-color: #04005e;
+        }
+    }
+    .navlinks.activeNav{
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .hamburger{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        @include flex(space-between);
+        flex-direction: column;
+        cursor: pointer;
+        display: none;
+        margin: 10px;
+        transition: all .5s ease-in-out;
+        div{
+            position: relative;
+            &:not(:nth-child(2)){
+                width: 60%;
+                height: 5px;
+                background-color: white;
+                border-radius: 10px;
+            }
+            &:nth-child(2){
+                width: 100%;
+                height: 5px;
+                background-color: white;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .hamburger.active{
+        @include flex(center);
+        display: none;
+        transition: all .5s ease-in-out;
+        div{
+            position: absolute;
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(1){
+                transform: rotate(45deg);
+                width: 100%;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg);
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+$other-devices: 400px;
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+
+//styles for media sizes
+
+
+@media only screen and (max-width: $medium) {
+    nav{
+        height: auto;
+        a{
+            margin: 10px 0 10px 0;
+        }
+        .hamburger{
+            display: flex;
+        }
+        .hamburger.active{
+            display: flex;
+        }
+    }
+}
+@media only screen and (max-width: $small) {
+    //your styles
+}
+@media only screen and (max-width: $extra-small) {
+    //your styles
+}
+@media only screen and (max-width: $other-devices) {
+    //your styles
+}

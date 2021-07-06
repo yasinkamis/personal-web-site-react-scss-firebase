@@ -1,0 +1,224 @@
+@mixin flex($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+
+.Project{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #001136;
+    @include flex(space-around);
+    flex-direction: column;
+    overflow: hidden;
+    background-image: url(../img/background.jpg);
+    h1{
+        color: white;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 5px;
+            left:50%;
+            top:80px;
+            transform: translateX(-50%);
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left:50%;
+            top:82px;
+            transform: translate(-50%,-50%);
+            background-color: yellow;
+            border-radius: 50%;
+        }
+    }
+    .row{
+        position: relative;
+        width: 100%;
+        @include flex(center);
+        .col1{
+            position: relative;
+            width: 40%;
+            height: 100%;
+            @include flex(space-between);
+            flex-direction: column;
+            color: white;
+            .linkedln , .behance , .instagram{
+                position: relative;
+                padding: 10px;
+                width: 500px;
+                background-color: rgba(0, 0, 0, 0.473);
+                border-radius: 10px;
+                h2{
+                    text-align: center;
+                    margin: 5px 0 15px 0;
+                    color: rgba(255, 255, 0, 0.644);
+                }
+                a{
+                    float: right;
+                    width: 120px;
+                    padding: 5px 10px;
+                    background-color: rgba(0, 0, 0, 0.473);
+                    border: 2px solid rgba(255, 255, 0, 0.644);
+                    border-radius: 5px;
+                    transition: all .5s ease-in-out;
+                    @include flex(center);
+                    text-decoration: none;
+                    color: white;
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        .col2{
+            position: relative;
+            width: 50%;
+            height: 100%;
+            @include flex(center);
+            flex-direction: column;
+            color: white;
+            .github{
+                position: relative;
+                width: 350px;
+                background-color: rgba(0, 0, 0, 0.473);
+                border-radius: 10px;
+                overflow: hidden;
+                img{
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                h3{
+                    padding: 0 10px;
+                    color: rgba(255, 255, 0, 0.644);
+                    span{
+                        color: white;
+                    }
+                }
+                a{
+                    float: right;
+                    margin: 10px;
+                    width: 120px;
+                    padding: 5px 10px;
+                    background-color: rgba(0, 0, 0, 0.473);
+                    border: 2px solid rgba(255, 255, 0, 0.644);
+                    border-radius: 5px;
+                    transition: all .5s ease-in-out;
+                    @include flex(center);
+                    text-decoration: none;
+                    color: white;
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+                h2{
+                    text-align: center;
+                    margin: 5px 0 15px 0;
+                    color: rgba(255, 255, 0, 0.644);
+                }
+            }
+        }
+    }
+}
+
+
+$other-devices: 400px;
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+//styles for media sizes
+
+@media only screen and (max-width: $large) {
+    .Project{
+        .row{
+            .col1{
+                width: 50%;
+                .linkedln , .behance , .instagram{
+                    width: 400px;
+                    a{
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .col2{
+                width: 50%;
+                .github{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: $medium) {
+    .Project{
+        .row{
+            .col1{
+                width: 50%;
+                .linkedln , .behance , .instagram{
+                    width: 350px;
+                    margin: 10px;
+                    a{
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $small) {
+    .Project{
+        height: 170vh;
+        .row{
+            @include flex(space-around);
+            flex-direction: column;
+            .col1{
+                @include flex(space-between);
+                flex-direction: column;
+                .linkedln , .behance , .instagram{
+                    width: 400px;
+                }
+            }
+            .col2{
+                margin-top: 20px;
+                .github{
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 461px) {
+    .Project{
+        .row{
+            @include flex(space-around);
+            flex-direction: column;
+            .col1{
+                @include flex(space-between);
+                flex-direction: column;
+                .linkedln , .behance , .instagram{
+                    width: 300px;
+                }
+            }
+            .col2{
+                margin-top: 20px;
+                .github{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: $other-devices) {
+    
+}
